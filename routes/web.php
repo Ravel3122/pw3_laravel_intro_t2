@@ -16,3 +16,7 @@ Route::get('/', function () {
 Route::get('/produtos', [ProdutoController::class , 'index']);
 Route::post('/produtos', [ProdutoController::class , 'store']);
 
+Route::view('/admin', 'admin.dashboard');
+
+Route::get('/usuarios/{id}/editar', [UserController::class , 'edit']);
+Route::put('/usuarios/{id}', [UserController::class , 'update']);
